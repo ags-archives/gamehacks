@@ -27,7 +27,7 @@ error came from by tweaking the AGS engine to print the sectionname of the
 first section (see [PR](https://github.com/adventuregamestudio/ags/pull/1340)).
 using this sectionname i could grep over all .s files and find the right file,
 as it is listed in .sections section.
-however, the code in gamescript1 was calling the plugin functions with nearcall
+however, the code in gamescript1 was calling the plugin functions with farcall
 commands, which is invalid for functions inside the same script.
 fortunately, i found that gamescript0.s didn't call any plugin functions, so
 it was safe to inject the code there, and as it is loaded before gamescript1,
